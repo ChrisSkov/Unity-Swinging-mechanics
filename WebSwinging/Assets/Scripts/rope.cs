@@ -10,6 +10,7 @@ public class rope : MonoBehaviour
     private bool isTarget1 = true;
     public bool hasParent;
 
+
     // Use this for initialization
     void Start()
     {
