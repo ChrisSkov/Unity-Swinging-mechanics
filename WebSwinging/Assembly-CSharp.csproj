@@ -64,6 +64,8 @@
      <Compile Include="Assets\Scripts\SwingController.cs" />
      <Compile Include="Assets\Scripts\SwitchTether.cs" />
      <Compile Include="Assets\Scripts\Tether.cs" />
+     <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
+     <None Include="Assets\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/stoff/SwingerKlubben/WebSwinging/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

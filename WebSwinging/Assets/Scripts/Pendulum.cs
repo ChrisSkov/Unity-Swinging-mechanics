@@ -9,8 +9,7 @@ public class Pendulum
     public Tether tether;
     public Arm arm;
     public Bob bob;
-    public float ropeMaxLength;
-
+  
     Vector3 previousPosition;
 
 
@@ -50,7 +49,6 @@ public class Pendulum
         pos += bob.velocity * time;
         if (Vector3.Distance(pos, tether.position) < arm.length)
         {
-            Mathf.Clamp(arm.length, 1, 20);
             pos = Vector3.Normalize(pos - tether.position) * arm.length;
             arm.length = (Vector3.Distance(pos, tether.position));
             return pos;

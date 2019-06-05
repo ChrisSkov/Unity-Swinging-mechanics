@@ -9,7 +9,9 @@ public class SwingController : MonoBehaviour
     public float gravity = 20.0F;
     public Camera cam;
     public Pendulum pendulum;
-    
+    public LineRenderer lr;
+
+
     private Vector3 moveDirection = Vector3.zero;
     float distToGround;
 
@@ -51,7 +53,7 @@ public class SwingController : MonoBehaviour
 
     bool IsGrounded()
     {
-        print("Grounded");
+        //  print("Grounded");
         return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
     }
 
@@ -74,13 +76,16 @@ public class SwingController : MonoBehaviour
                 }
                 pendulum.SwitchTether(hit.point);
                 state = State.Swinging;
+                lr.enabled = true;
 
             }
         }
         else if (Input.GetButtonDown("Fire2"))
         {
+            lr.enabled = false;
             if (state == State.Swinging)
             {
+
                 state = State.Falling;
             }
         }

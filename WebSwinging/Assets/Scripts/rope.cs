@@ -30,23 +30,24 @@ public class rope : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
+        
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
-            {
-                print(hit.transform.name);
-                lr.enabled = true;
-            }
-        }
-        else if (Input.GetButtonDown("Fire2"))
-        {
-            lr.enabled = false;
-        }
+        // if (Input.GetButtonDown("Fire1"))
+        // {
+        //     RaycastHit hit;
+        //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //     if (Physics.Raycast(ray, out hit))
+        //     {
+        //         print(hit.transform.name);
+        //         lr.enabled = true;
+        //     }
+        // }
+        // else if (Input.GetButtonDown("Fire2"))
+        // {
+        //     lr.enabled = false;
+        // }
 
         lr = GetComponent<LineRenderer>();
         if (hasParent)
